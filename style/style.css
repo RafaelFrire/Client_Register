@@ -1,0 +1,205 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+  
+}
+/* 
+    configuration of header 
+    START
+*/
+
+
+header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    background-color: #FEB706;
+    min-height: 14vh;
+    text-align: center;
+}
+
+header h1{
+    margin: 0px auto;
+    font-size: 2.2em;
+}
+
+button#btn-register{
+    padding: 5px 15px;
+    border-radius: 3.5px;
+    border: 1.5px solid gray;
+    background-color: #0A93DD;
+    color: white;
+    margin-right: 1.4em;
+    cursor: pointer;
+
+    margin: 0px auto;
+}
+
+header button:hover{
+    background-color: #000;
+    color: white;
+    
+}
+
+/* 
+    Configuration of header
+    END
+*/
+
+
+/* 
+    Configure of table and your components
+    START
+*/
+
+table{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 30vh;
+    max-width: 700px;
+    background-color: #727070;
+    border-radius: 5px;
+    margin: 20px auto;
+    
+}
+
+
+
+table tr td{  
+    
+    text-align: center;
+    max-width: 250px;
+    padding: 5px 10px;
+
+}
+
+table tr.header-title td{
+    font-weight: bold;
+    background-color: #FEB706;
+}
+
+table tr.data-client td{
+    color: white;
+
+}
+
+table tr.data-client td#remove_action{
+    cursor: pointer;
+
+}
+
+table tr.data-client td#remove_action:hover{
+    color: #e56;
+
+}
+
+
+/* 
+    Configure of table and your components
+    END
+*/
+
+
+/* 
+    gerenator of Modal
+*/
+
+
+.modal.open{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;  
+    width: 100vw;
+    min-height: 100vh;
+    background-color: rgb(0,0,0, .4);
+    z-index: 2;
+    
+}
+
+.modal.close{
+    display: none;
+}
+
+.modal-popUp{
+    width: 450px;
+    min-height: 40vh;
+    background-color: #F5EDED;
+    border-radius: 10px;
+  
+}
+
+.pop-button{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.pop-button button{
+    font-weight: bold;
+    font-size: 1em;
+    color: black;
+    border-radius: 55%;
+    border: 2px solid black;
+    background: transparent;
+    background-color: #FFAE29;
+    padding: 8px 12px;
+    cursor: pointer;
+    
+}
+
+.pop-button button:hover{
+    color: white;
+    border: 2px solid #E34626;
+    transition: .2s;
+}
+
+.input{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 10px;  
+}
+
+.input span{
+    margin-top: 5px;
+    font-size: .75em;
+    color: #FD390F;
+    font-weight: bold;
+    text-align: start;
+    width: 215px;
+    display: none;
+
+   
+}
+
+.input input{
+    width: 220px;
+    height: 30px;
+    
+} input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.button-register{
+ 
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    min-height: 15vh;
+}

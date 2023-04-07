@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client Register</title>
+    <link rel="stylesheet" href="./style/style.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header>
+        <h1>Cadastrar Cliente</h1>
+  
+    </header>
+    <table class="main-table">
+        <!-- 
+            This section is main component of application
+            you can configure header, client register, modal
+
+            here you have acess to all inputs field
+            for example: Name, E-mail, CellPhone Number, City
+
+
+
+         -->
+        <td><button id="btn-register">Cadastar</button></td>
+        <tbody class="main-body">
+
+        <!-- 
+            Header title has inputs in table form
+        -->
+        <tr class="header-title">
+            <td>Nome</td>
+            <td>E-mail</td>
+            <td>Telefone</td>
+            <td>Cidade</td>
+        </tr>
+        <!-- 
+            This section has all register of clients
+            you can add our remover of list
+         -->
+        <tr class="data-client">
+            <td id="client_Name">Rafael</td>
+            <td id="client_Email">contato@mrfreire.com.br</td>
+            <td id="client_Phone">(11) 99999-9999</td>
+            <td id="client_city">São Paulo</td>
+        </tr>
+
+        </tbody>
+    </table>
+
+
+
+
+    <div class="modal open">
+
+        <!-- 
+            Section Modal you have acess to
+            - Inputs for example, name, email, number, city
+            - have button button that has effect toggle to open and close modal
+            - has a button to register client, where take all info and sent to app  
+         -->
+        <div class="modal-popUp">
+            <div class="pop-button">
+                <button id="close-modal">X</button>
+            </div>
+            
+            <div class="input">
+                <input type="text" placeholder="Digite seu nome" class="inputs required" oninput='nameValidate()'>
+                <span class="span-required"> Nome deve conter 3 caracteres </span>
+            </div>
+
+            <div class="input">
+                <input type="text" placeholder="Digite seu E-mail" class="inputs required" oninput='emailValidate()'>
+                <span class="span-required"> E-mail Invalido </span>
+            </div>
+
+            <div class="input">
+                <input type="number" placeholder="(11) 99999-9999" class="inputs required" onkeyup="numberValidate()" >
+                <span class="span-required"> Telefone Invalido </span>
+            </div>
+
+            <div class="input">
+                <input type="text" placeholder="Digite sua Cidade" class="inputs required">
+                <span class="span-required"> Nome deve conter 3 caracteres </span>
+            </div>
+
+            <div class="button-register">
+                <button id="btn-register" type="submit" onclick="removeItems()"> Cadastrar</button>
+            </div>            
+
+        </div>
+    </div>
+
+
+    <script src="./script/main.js"></script>
+</body>
+</html>
