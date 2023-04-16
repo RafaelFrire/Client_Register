@@ -24,6 +24,8 @@
     const btnRegister = document.querySelector(".button-register button#btn-register")
     let dataClient = document.querySelectorAll(".required")
     const spans = document.querySelectorAll(".span-required")
+   
+    
        
 
     function setError(index){
@@ -34,15 +36,23 @@
         dataClient[index].style.border = "";
         spans[index].style.display = "none";
     }
+   
+
+
 
     function nameValidate(){
         let clientName = dataClient[0].value
         if(clientName.length < 3){
            setError(0)
         } 
+        else if(clientName == null){
+            error(clientName)
+
+        }
         else{
             removeError(0)
         }
+        error(clientName);
     }
 
     function emailValidate(){
@@ -83,7 +93,6 @@
 
     }
 
-
    function insertData(){
         const Name = dataClient[0].value
         const Email = dataClient[1].value
@@ -101,13 +110,10 @@
    
         <td id="client_Phone"> ${CellPhone}</td>
         <td id="client_city"> ${Adress}</td>
-        <td id="remove_action"><i class="fa-solid fa-trash-can"></i></td>
 
         `
 
         tbody.appendChild(Newtr)
    }
-
-
    
 ToggleModal()
